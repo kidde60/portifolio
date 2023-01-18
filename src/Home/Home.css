@@ -1,0 +1,160 @@
+.home-container {
+    display: flex;
+    padding: 5% 0 8%;
+    background-color: rgb(10, 33, 70);
+    background-image: url(./shape-bg.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    align-items: center;
+    background-size: contain;
+    color: cornsilk;
+}
+
+.home {
+    width: 50%;
+    padding-left: 5%;
+}
+
+.home h1 {
+    font-size: 30px;
+}
+
+.home .name {
+    color: red;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    padding: 2% 10px;
+    color: cornsilk;
+}
+
+.paragraph {
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 0 0 cornsilk;
+    border-radius: 50%;
+    height: 450px;
+    width: 450px;
+    margin: 0 0 0 100px;
+}
+
+.profile-photo {
+    background-image: url(./95461386.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+}
+
+.profile-photo:hover {
+    transform: scale(1.09);
+    transition: 1s ease-out;
+}
+
+.home-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 5%;
+}
+
+.hire-btn {
+    border: 1px solid cornsilk;
+    padding: 5px 20px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgb(10, 33, 70);
+    cursor: pointer;
+}
+
+.hire-btn:hover {
+    border: 1px solid green;
+}
+
+.hire {
+    background: green;
+    color: whitesmoke;
+    padding: 5px 30px;
+    border: none;
+    font-size: 25px;
+    border-radius: 15px;
+}
+
+.hire:hover {
+    border: 1px solid cornsilk;
+}
+
+@media only screen and (max-width: 1110px) {
+    .profile {
+        margin: 0 0 0 80px;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .profile {
+        width: 320px;
+        height: 320px;
+        margin: 0 0 0 10%;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    .profile {
+        margin: 0;
+
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        padding: 15% 5px 8%;
+    }
+
+    .profile {
+        margin: 0 0 7% 0;
+    }
+
+    .home {
+        width: 100%;
+    }
+
+    .coln {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home h1 {
+        font-size: 28px;
+    }
+
+    .home-btn {
+
+        gap: 15px;
+        padding: 2%;
+    }
+
+    .hire,
+    .hire-btn {
+        padding: 5px 20px;
+        font-size: 20px;
+    }
+
+    .hire:hover {
+        border: 1px solid cornsilk;
+    }
+}
