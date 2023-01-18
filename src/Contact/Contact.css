@@ -1,0 +1,67 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 30%;
+    text-align: left;
+    color: #111;
+}
+
+.form-container {
+    background-color: rgb(10, 33, 70);
+    text-align: center;
+
+}
+
+label {
+    font-size: 25px;
+    margin: 10px 0;
+    color: cornsilk;
+}
+
+input {
+    height: 30px;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+textarea {
+    height: 200px;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.send {
+    padding: 0 10px;
+    height: 40px;
+    margin: 10px 0;
+    font-size: 25px;
+    background: green;
+    color: whitesmoke;
+}
+
+.send:hover {
+    border: 1px solid cornsilk;
+}
+
+@media only screen and (max-width: 760px) {
+    .form {
+
+        margin: 10px 5%;
+
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    input,
+    textarea {
+        font-size: 18px;
+    }
+}
