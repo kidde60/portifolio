@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/http//kidde60.github.io/portifolio/static/css/main.1dce5fd1.css",
+    "main.js": "/http//kidde60.github.io/portifolio/static/js/main.90e091fa.js",
+    "static/media/hotel.png": "/http//kidde60.github.io/portifolio/static/media/hotel.ce20e9e181e27fed4864.png",
+    "static/media/bookstore.png": "/http//kidde60.github.io/portifolio/static/media/bookstore.6e0ed9da4aac40189c19.png",
+    "static/media/todolist.png": "/http//kidde60.github.io/portifolio/static/media/todolist.596d9d486638842ff5b9.png",
+    "static/media/95461386.jpeg": "/http//kidde60.github.io/portifolio/static/media/95461386.1f54ff3a37f6e8bad7ab.jpeg",
+    "index.html": "/http//kidde60.github.io/portifolio/index.html",
+    "main.1dce5fd1.css.map": "/http//kidde60.github.io/portifolio/static/css/main.1dce5fd1.css.map",
+    "main.90e091fa.js.map": "/http//kidde60.github.io/portifolio/static/js/main.90e091fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1dce5fd1.css",
+    "static/js/main.90e091fa.js"
+  ]
+}
