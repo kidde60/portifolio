@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaEnvelope, FaGithub, FaLinkedinIn, FaTwitter, FaGlobe } from "react-icons/fa";
-import Typical from 'react-typical';
+// import Typical from 'react-typical';
 import Navbar from '../Navbar/Navbar';
 import './Home.css';
 import Projects from '../Projects/Projects';
@@ -28,7 +28,7 @@ export default function
 
 
                     </div>
-                    <div className='primary-text'>
+                    {/* <div className='primary-text'>
                         {' '}
                         <h1>
                             {' '}
@@ -42,7 +42,7 @@ export default function
                                 ]}
                             />
                         </h1>
-                    </div>
+                    </div> */}
                     <p className='paragraph'>I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hestiate to contact me.</p>
                     <div className='home-btn'>
                         <NavLink to='../Contact' className='hire'>Hire me</NavLink>
