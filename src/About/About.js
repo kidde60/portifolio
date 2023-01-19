@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import Navbar from '../Navbar/Navbar';
+import Navbar from '../Navbar/Navbar';
 import './About.css';
 
 export default function About() {
   return (
     <div className="about">
-      {/* <Navbar /> */}
+      <Navbar />
       <h1 className="desc">
         Iam a web developer who loves learning new skills and put my
         knowledge into building projects.
