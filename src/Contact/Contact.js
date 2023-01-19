@@ -10,10 +10,10 @@ export default function Contact() {
     e.preventDefault();
 
     emailjs.sendForm('service_cuzw0r3', 'template_4c9mn2l', form.current, 'SM97kljcWNAOQG39c')
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
+      .then(() => {
+        // console.log(result.text);
+      }, () => {
+        // console.log(error.text);
       });
   };
   return (
