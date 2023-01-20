@@ -3,6 +3,7 @@
     flex-direction: column;
     margin: 10px 30%;
     text-align: left;
+
 }
 
 .form-container {
@@ -36,9 +37,11 @@ input {
     border: 1px solid cornsilk;
     border-radius: 10px;
     outline: none;
+    background: rgb(10, 33, 70);
 }
 
 textarea {
+    background: rgb(10, 33, 70);
     height: 200px;
     font-size: 20px;
     padding: 5px 10px;
