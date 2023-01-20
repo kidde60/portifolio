@@ -19,10 +19,12 @@ export default function Contact() {
   return (
     <div className="form-container">
 
-      <div>
+      <div className="contact">
         <h1>Contact Me</h1>
         <p>
-          I am interested in remote or relocation jobs.
+          I am interested in both remote and relocation jobs.
+        </p>
+        <p>
           Please contact me if you have any requests
           or questions.
         </p>
