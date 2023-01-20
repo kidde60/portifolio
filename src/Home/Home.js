@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import ProjectsCard from '../Projects/ProjectsCard';
 // import {
 //   FaEnvelope, FaGithub, FaLinkedinIn, FaTwitter, FaGlobe,
 // } from 'react-icons/fa';
@@ -46,7 +47,7 @@ export default function Home() {
           <div className="profile-photo" />
         </div>
       </div>
-
+      <ProjectsCard />
     </>
   );
 }

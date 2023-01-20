@@ -3,26 +3,37 @@
     flex-direction: column;
     margin: 10px 30%;
     text-align: left;
-    color: #111;
 }
 
 .form-container {
     background-color: rgb(10, 33, 70);
     text-align: center;
+    padding: 7% 0 5%;
+}
 
+.contact h1 {
+    font-size: 40px;
+    padding: 20px 0;
+}
+
+.contact p {
+    font-size: 20px;
 }
 
 label {
+    display: flex;
+    flex-direction: column;
     font-size: 25px;
     margin: 10px 0;
     color: cornsilk;
+    gap: 10px;
 }
 
 input {
-    height: 30px;
+    height: 40px;
     font-size: 20px;
     padding: 5px 10px;
-    border: none;
+    border: 1px solid cornsilk;
     border-radius: 10px;
     outline: none;
 }
@@ -31,7 +42,7 @@ textarea {
     height: 200px;
     font-size: 20px;
     padding: 5px 10px;
-    border: none;
+    border: 1px solid cornsilk;
     border-radius: 10px;
     outline: none;
 }
@@ -54,6 +65,14 @@ textarea {
 
         margin: 10px 5%;
 
+    }
+
+    .contact h1 {
+        font-size: 35px;
+    }
+
+    .contact p {
+        font-size: 18px;
     }
 
     label {
