@@ -1,9 +1,10 @@
 import React from 'react';
 import CardContainer from './ProjectsDetails';
+import './Projects.css';
 
 export default function ProjectsCard() {
   return (
-    <div>
+    <div className="container">
       {CardContainer.map((value) => (
         <div
           className="card"
