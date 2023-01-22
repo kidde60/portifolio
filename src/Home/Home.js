@@ -5,13 +5,13 @@ import ProjectsCard from '../Projects/ProjectsCard';
 //   FaEnvelope, FaGithub, FaLinkedinIn, FaTwitter, FaGlobe,
 // } from 'react-icons/fa';
 // import Typical from 'react-typical';
-// import Navbar from '../Navbar/Navbar';
+import Navbar from '../Navbar/Navbar';
 import './Home.css';
 
 export default function Home() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="home-container">
         <div className="home">
           <h1 className="coln">
