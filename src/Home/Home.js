@@ -1,5 +1,5 @@
 import React from 'react';
-import Typical from 'react-typical';
+// import Typical from 'react-typical';
 import { NavLink } from 'react-router-dom';
 import ProjectsCard from '../Projects/ProjectsCard';
 // import {
@@ -19,7 +19,7 @@ export default function Home() {
             <span className="name"> George William Kidde</span>
           </h1>
 
-          <div className="primary-text">
+          {/* <div className="primary-text">
             {' '}
             <h1>
               {' '}
@@ -33,7 +33,7 @@ export default function Home() {
                 ]}
               />
             </h1>
-          </div>
+          </div> */}
           <p className="paragraph">I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, do not hestiate to contact me.</p>
           <div className="home-btn">
             <NavLink to="../Contact" className="hire">Hire me</NavLink>
