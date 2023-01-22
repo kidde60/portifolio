@@ -1,31 +1,37 @@
-// import React, { Component } from 'react';
-// import { NavLink } from 'react-router-dom';
-// import './Navbar.css';
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import './Navbar.css';
 
-// export default class Navbar extends Component {
-//   state = { clicked: false };
+const Navbar = () => {
+  const [clicked, setClicked] = useState(false);
 
-//   handleClick = () => {
-//     this.setState({ clicked: !this.state.clicked });
-//   }
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 600 && clicked) {
+        setClicked(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [clicked]);
 
-//   render() {
-//     return (
-//       <div>
-//         <nav id="navbar">
-//           <NavLink to="../" className="logo">KGW</NavLink>
-//           <div id="nav-list" className={this.state.clicked ? '#nav-list active' : '#nav-list'}>
+  return (
 
-//             <NavLink to="../">Home</NavLink>
-//             <NavLink to="../About">About</NavLink>
+    <div>
+      <nav id="navbar">
+        <NavLink to="../" className="logo">KGW</NavLink>
+        <div id="nav-list" className={clicked ? '#nav-list active' : '#nav-list'}>
 
-//             <NavLink to="../Contact">Contact</NavLink>
-//           </div>
-//         </nav>
-//         <div id="mobile" onClick={this.handleClick}>
-//           <i id="bars" className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'} />
-//         </div>
-//       </div>
-//     );
-//   }
-// }
+          <NavLink to="../">Home</NavLink>
+          <NavLink to="../About">About</NavLink>
+
+          <NavLink to="../Contact">Contact</NavLink>
+        </div>
+      </nav>
+      <button type="button" id="mobile" onClick={() => setClicked(!clicked)}>
+        <i id="bars" className={clicked ? 'fas fa-times' : 'fas fa-bars'} />
+      </button>
+    </div>
+  );
+};
+export default Navbar;
