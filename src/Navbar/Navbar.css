@@ -20,11 +20,15 @@
     right: 0;
     top: 10px;
     margin-right: 5%;
+    outline: none;
+    border: none;
+    background: rgb(10, 33, 70);
 }
 
 #mobile i {
     color: white;
     display: none;
+
 
 }
 
