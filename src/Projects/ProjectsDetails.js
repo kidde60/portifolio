@@ -9,6 +9,7 @@ const CardContainer = [
     desc: 'This Hotel webpage allows a user to see all the services offered at the hotel, view the available accomodation rooms, their sizes and contact the management for booking a room a rated per night',
     live: 'https://kidde60.github.io/Capstone-project-1/index.html',
     source: 'https://github.com/kidde60/Capstone-project-1',
+    build: 'Html5, Css3, JavaScript, Webpack, ES6',
 
   },
   {
@@ -17,7 +18,7 @@ const CardContainer = [
     desc: 'This book store web app allows a user to add a new book with the author name, remove a book, see all the boooks available in the library and alerts the user incase there are no books in the library.',
     live: 'https://kidde60.github.io/Awesome-books-with-ES6/',
     source: 'https://github.com/kidde60/Awesome-books-with-ES6',
-
+    build: 'Html5, Css3, JavaScript, ES6',
   },
   {
     imagesrc: todolist,
@@ -25,7 +26,7 @@ const CardContainer = [
     desc: 'This Todo list web app allows a user to add a todo, edit the todo, checkout the completed todo, delete a todo and delete all the completed todos.',
     live: 'https://kidde60.github.io/To-Do-List-Webpage/',
     source: 'https://github.com/kidde60/To-Do-List-Webpage',
-
+    build: 'Html5, Css3, JavaScript, ES6',
   },
 ];
 export default CardContainer;
