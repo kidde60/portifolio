@@ -1,10 +1,9 @@
 import React from 'react';
-// import Typical from 'react-typical';
 import { NavLink } from 'react-router-dom';
+import {
+  FaEnvelope, FaGithub, FaLinkedinIn, FaTwitter,
+} from 'react-icons/fa';
 import ProjectsCard from '../Projects/ProjectsCard';
-// import {
-//   FaEnvelope, FaGithub, FaLinkedinIn, FaTwitter, FaGlobe,
-// } from 'react-icons/fa';
 import Navbar from '../Navbar/Navbar';
 import './Home.css';
 
@@ -18,22 +17,24 @@ export default function Home() {
             Hello, Iam
             <span className="name"> George William Kidde</span>
           </h1>
+          <div className="social">
+            <a href="https://kgeorgewilliam60@gmail.com">
+              <FaEnvelope />
+            </a>
+            <a href="https://github.com/kidde60">
+              <FaGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/kidde-george-william/">
+              <FaLinkedinIn />
+            </a>
+            <a href="https://twitter.com/KGWilliam60">
+              <FaTwitter />
+            </a>
+            <a href="#index.html">
+              <i className="fa-solid fa-globe" />
+            </a>
+          </div>
 
-          {/* <div className="primary-text">
-            {' '}
-            <h1>
-              {' '}
-              <Typical
-                loop={Infinity}
-                steps={[
-                  'Software developer', 2000,
-                  'Frontend developer', 2000,
-                  'JavaScript developer', 2000,
-                  'React js developer', 2000,
-                ]}
-              />
-            </h1>
-          </div> */}
           <p className="paragraph">I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, do not hestiate to contact me.</p>
           <div className="home-btn">
             <NavLink to="../Contact" className="hire">Hire me</NavLink>
