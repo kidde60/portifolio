@@ -30,7 +30,7 @@ export default function Home() {
             <a href="https://twitter.com/KGWilliam60">
               <FaTwitter />
             </a>
-            <a href="https://peppy-chebakia-fd6e31.netlify.app/">
+            <a href="https://george-william-kidde-portifolio.netlify.app/">
               <i className="fa-solid fa-globe" />
             </a>
           </div>
