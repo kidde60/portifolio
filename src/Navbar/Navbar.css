@@ -1,12 +1,15 @@
 #navbar {
-    background-color: rgb(10, 33, 70);
-    color: whitesmoke;
+    background-color: #2a2876;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 5%;
     position: fixed;
     width: 100%;
+}
+
+#navbar a {
+    color: #f5f5ff;
 }
 
 #nav-list {
