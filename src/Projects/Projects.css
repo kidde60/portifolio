@@ -13,26 +13,26 @@
 }
 
 .card {
-    border: 2px solid #c7c7c7;
+    border: 2px solid #f5f5ff;
     padding: 10px;
-    background-color: #f1f8f8;
+    background-color: #191765;
 
 }
 
 .card h3 {
-    color: #111;
+    color: #f5f5ff;
 }
 
 .card:hover {
     transform: scale(1.05);
-    transition: 0.25s ease-out;
+    transition: 0.25s ease-in-out;
 }
 
 .card h1 {
     font-size: 35px;
     font-weight: 500;
     text-align: center;
-    color: #111;
+    color: #f5f5ff;
 }
 
 .card img {
@@ -43,7 +43,7 @@
 
 .card p {
     font-size: 20px;
-    color: #111;
+    color: #f5f5ff;
     padding: 20px 0;
 }
 
@@ -56,18 +56,25 @@
 }
 
 .live {
-    background: green;
+    background-color: #191765;
+    color: #f5f5ff;
     padding: 5px 20px;
     font-size: 25px;
     border-radius: 15px;
-    color: cornsilk;
-    border: 1px solid cornsilk;
+    border: 1px solid #f5f5ff;
+}
+.live:hover{
+    /* border: 1px solid #191765; */
+    background-color: #f5f5ff;
+    color: #191765;
+}
+#btn {
+    padding: 5px 30px;
 }
 
-.btn {
-    border: #c7c7c7 1px solid;
-    padding: 5px 30px;
-
+.project{
+    color: #191765;
+    text-align: center;
 }
 
 @media only screen and (max-width: 760px) {
@@ -81,10 +88,9 @@
     .live {
         padding: 5px 20px;
         font-size: 20px;
-        border: 1px solid cornsilk;
     }
 
-    .btn {
+    #btn {
         padding: 5px 30px;
     }
 }
