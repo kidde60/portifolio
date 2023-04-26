@@ -7,7 +7,8 @@
 }
 
 .form-container {
-    background-color: rgb(10, 33, 70);
+    background-color: #191765;
+    color: #f5f5ff;
     text-align: center;
     padding: 7% 0 5%;
 }
@@ -26,7 +27,7 @@ label {
     flex-direction: column;
     font-size: 25px;
     margin: 10px 0;
-    color: cornsilk;
+    color: #f5f5ff;
     gap: 10px;
 }
 
@@ -34,18 +35,18 @@ input {
     height: 40px;
     font-size: 20px;
     padding: 5px 10px;
-    border: 1px solid cornsilk;
+    border: 1px solid #f5f5ff;
     border-radius: 10px;
     outline: none;
-    background: rgb(10, 33, 70);
+    background:#191765;
 }
 
 textarea {
-    background: rgb(10, 33, 70);
+    background: #191765;
     height: 200px;
     font-size: 20px;
     padding: 5px 10px;
-    border: 1px solid cornsilk;
+    border: 1px solid #f5f5ff;
     border-radius: 10px;
     outline: none;
 }
@@ -55,12 +56,13 @@ textarea {
     height: 40px;
     margin: 10px 0;
     font-size: 25px;
-    background: green;
+    background:#00f;
+    border: none;
     color: whitesmoke;
 }
 
 .send:hover {
-    border: 1px solid cornsilk;
+    border: 1px solid #f5f5ff;
 }
 
 @media only screen and (max-width: 760px) {
