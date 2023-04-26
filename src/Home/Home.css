@@ -1,13 +1,13 @@
 .home-container {
     display: flex;
     padding: 5% 0 8%;
-    background-color: rgb(10, 33, 70);
+    background-color: #191765;
     background-image: url(./shape-bg.png);
     background-position: bottom;
     background-repeat: no-repeat;
     align-items: center;
     background-size: contain;
-    color: cornsilk;
+    color: #f5f5ff;
 }
 
 .home {
@@ -19,17 +19,13 @@
     font-size: 30px;
 }
 
-.home .name {
-    color: red;
-}
-
 .social {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 50%;
     padding: 2% 10px;
-    color: cornsilk;
+    background:#191765;
 }
 
 .paragraph {
@@ -41,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 0 0 cornsilk;
+    box-shadow: 0 2px 0 0 #f5f5ff;;
     border-radius: 50%;
     height: 450px;
     width: 450px;
@@ -72,20 +68,20 @@
 }
 
 .hire-btn {
-    border: 1px solid cornsilk;
+    border: 1px solid #f5f5ff;;
     padding: 5px 20px;
     font-size: 20px;
     border-radius: 15px;
-    background-color: rgb(10, 33, 70);
+    background-color: #191765;
     cursor: pointer;
 }
 
 .hire-btn:hover {
-    border: 1px solid green;
+    border: 1px solid #00f;
 }
 
 .hire {
-    background: green;
+    background: #00f;
     color: whitesmoke;
     padding: 5px 30px;
     border: none;
@@ -94,7 +90,9 @@
 }
 
 .hire:hover {
-    border: 1px solid cornsilk;
+    background-color: #191765;
+    color: #f5f5ff;
+    border: 1px solid #f5f5ff;
 }
 
 @media only screen and (max-width: 1110px) {
