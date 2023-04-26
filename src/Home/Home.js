@@ -5,6 +5,7 @@ import {
 } from 'react-icons/fa';
 import ProjectsCard from '../Projects/ProjectsCard';
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 import './Home.css';
 
 export default function Home() {
@@ -49,6 +50,7 @@ export default function Home() {
         </div>
       </div>
       <ProjectsCard />
+      <Footer />
     </>
   );
 }
