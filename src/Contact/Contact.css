@@ -1,91 +1,88 @@
 .form {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 30%;
-    text-align: left;
-
+  display: flex;
+  flex-direction: column;
+  margin: 10px 30%;
+  text-align: left;
 }
 
 .form-container {
-    background-color: #191765;
-    color: #f5f5ff;
-    text-align: center;
-    padding: 7% 0 5%;
+  background-color: #191765;
+  color: #f5f5ff;
+  text-align: center;
+  padding: 7% 0 5%;
 }
 
 .contact h1 {
-    font-size: 40px;
-    padding: 20px 0;
+  font-size: 40px;
+  padding: 20px 0;
 }
 
 .contact p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 label {
-    display: flex;
-    flex-direction: column;
-    font-size: 25px;
-    margin: 10px 0;
-    color: #f5f5ff;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  margin: 10px 0;
+  color: #f5f5ff;
+  gap: 10px;
 }
 
 input {
-    height: 40px;
-    font-size: 20px;
-    padding: 5px 10px;
-    border: 1px solid #f5f5ff;
-    border-radius: 10px;
-    outline: none;
-    background:#191765;
+  height: 40px;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: 1px solid #f5f5ff;
+  border-radius: 10px;
+  outline: none;
+  background: #191765;
 }
 
 textarea {
-    background: #191765;
-    height: 200px;
-    font-size: 20px;
-    padding: 5px 10px;
-    border: 1px solid #f5f5ff;
-    border-radius: 10px;
-    outline: none;
+  background: #191765;
+  height: 200px;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: 1px solid #f5f5ff;
+  border-radius: 10px;
+  outline: none;
 }
 
 .send {
-    padding: 0 10px;
-    height: 40px;
-    margin: 10px 0;
-    font-size: 25px;
-    background:#00f;
-    border: none;
-    color: whitesmoke;
+  padding: 0 10px;
+  height: 40px;
+  margin: 10px 0;
+  font-size: 25px;
+  background: #00f;
+  border: none;
+  color: whitesmoke;
 }
 
 .send:hover {
-    border: 1px solid #f5f5ff;
+  border: 1px solid #f5f5ff;
 }
 
 @media only screen and (max-width: 760px) {
-    .form {
+  .form {
+    margin: 10px 5%;
+  }
 
-        margin: 10px 5%;
+  .contact h1 {
+    font-size: 35px;
+  }
 
-    }
+  .contact p {
+    font-size: 18px;
+  }
 
-    .contact h1 {
-        font-size: 35px;
-    }
+  label {
+    font-size: 20px;
+  }
 
-    .contact p {
-        font-size: 18px;
-    }
-
-    label {
-        font-size: 20px;
-    }
-
-    input,
-    textarea {
-        font-size: 18px;
-    }
+  input,
+  textarea {
+    font-size: 18px;
+  }
 }

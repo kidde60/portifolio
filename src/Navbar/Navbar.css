@@ -1,67 +1,65 @@
 #navbar {
-    background-color: #2a2876;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 5%;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
+  background-color: #2a2876;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5%;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 #navbar a {
-    color: #f5f5ff;
+  color: #f5f5ff;
 }
 
 #nav-list {
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
 }
 
 #mobile {
-    position: fixed;
-    right: 0;
-    top: 10px;
-    margin-right: 5%;
-    outline: none;
-    border: none;
-    background: #2a2876;
+  position: fixed;
+  right: 0;
+  top: 10px;
+  margin-right: 5%;
+  outline: none;
+  border: none;
+  background: #2a2876;
 }
 
 #mobile i {
-    color: white;
-    display: none;
-
-
+  color: white;
+  display: none;
 }
 
 @media only screen and (max-width: 760px) {
-    #nav-list {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        list-style: none;
-        position: fixed;
-        top: 4.8%;
-        right: -300px;
-        height: 100vh;
-        background-color:  #2a2876;
-        font-size: 18px;
-        gap: 10px;
-        padding: 20px;
-        transition: 0.25s ease-in-out;
-        z-index: 1;
-    }
+  #nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style: none;
+    position: fixed;
+    top: 4.8%;
+    right: -300px;
+    height: 100vh;
+    background-color: #2a2876;
+    font-size: 18px;
+    gap: 10px;
+    padding: 20px;
+    transition: 0.25s ease-in-out;
+    z-index: 1;
+  }
 
-    #nav-list.active {
-        right: 0;
-        width: 50%;
-    }
+  #nav-list.active {
+    right: 0;
+    width: 50%;
+  }
 
-    #mobile i {
-        color: white;
-        display: block;
-        cursor: pointer;
-    }
+  #mobile i {
+    color: white;
+    display: block;
+    cursor: pointer;
+  }
 }
