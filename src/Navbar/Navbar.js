@@ -21,7 +21,6 @@ const Navbar = () => {
       <nav id="navbar">
         <NavLink to="../" className="logo">KGW</NavLink>
         <div id="nav-list" className={clicked ? '#nav-list active' : '#nav-list'}>
-
           <NavLink to="../">Home</NavLink>
           <NavLink to="../About">About</NavLink>
 
