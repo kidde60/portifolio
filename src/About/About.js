@@ -31,7 +31,6 @@ export default function About() {
           </p>
         </div>
         <div className="stack">
-          <h1>My stack</h1>
           <div className="tech">
             <div className="skills">
               <h2>Languages</h2>
