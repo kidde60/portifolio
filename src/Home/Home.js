@@ -16,8 +16,11 @@ export default function Home() {
         <div className="home">
           <h1 className="coln">
             Hello, Iam
-            <span className="name"> George William Kidde</span>
+            {' '}
+            <br />
+            George William Kidde
           </h1>
+          <h2>Software Developer</h2>
           <div className="social">
             <a href="https://kgeorgewilliam60@gmail.com">
               <FaEnvelope />
