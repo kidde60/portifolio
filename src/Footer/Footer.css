@@ -1,3 +1,6 @@
+#footer-social {
+  margin: 0 30%;
+}
 .footer {
   background-color: #191765;
   color: #f5f5ff;
@@ -8,6 +11,11 @@
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(180deg);
-  padding: 50px 0;
+  padding: 45px 0;
   background-color: #191765;
+}
+@media only screen and (max-width: 760px) {
+  .background{
+    padding: 40px 0 0;
+  }
 }
