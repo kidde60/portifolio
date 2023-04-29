@@ -16,7 +16,13 @@
 }
 
 .home h1 {
-  font-size: 30px;
+  font-size: 55px;
+  font-weight: 600;
+}
+
+.home h2 {
+  text-align: center;
+  font-size: 38px;
 }
 
 .social {
@@ -31,6 +37,9 @@
 .paragraph {
   font-size: 20px;
   padding: 20px 0;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
 }
 
 .profile {
@@ -122,6 +131,14 @@
     padding: 15% 5px 8%;
   }
 
+  .home h1 {
+    font-size: 34px;
+  }
+
+  .home h2 {
+    font-size: 30px;
+  }
+
   .profile {
     margin: 0 0 7% 0;
   }
@@ -136,7 +153,11 @@
   }
 
   .home h1 {
-    font-size: 28px;
+    font-size: 34px;
+  }
+
+  .home h2 {
+    font-size: 30px;
   }
 
   .home-btn {
