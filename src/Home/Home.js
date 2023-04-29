@@ -18,7 +18,8 @@ export default function Home() {
             Hello, Iam
             {' '}
             <br />
-            George William Kidde
+            <span className="span">George William Kidde</span>
+
           </h1>
           <h2>Software Developer</h2>
           <div className="social">
