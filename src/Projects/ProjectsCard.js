@@ -17,11 +17,10 @@ export default function ProjectsCard() {
               <h1>{value.title}</h1>
 
               <p>{value.desc}</p>
-              <ul className="lists d-flex flex-row justify-content-center">
+              <ul className="lists d-flex flex-row justify-content-start">
                 <li className="css">{value.build.css}</li>
                 <li>{value.build.html}</li>
                 <li>{value.build.bootstrap}</li>
-                <li>{value.build.ruby}</li>
                 <li>{value.build.lags}</li>
               </ul>
               <div className="project-btn">
