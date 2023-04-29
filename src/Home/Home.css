@@ -156,14 +156,6 @@
     flex-direction: column;
   }
 
-  .home h1 {
-    font-size: 34px;
-  }
-
-  .home h2 {
-    font-size: 30px;
-  }
-
   .home-btn {
     gap: 15px;
     padding: 2%;
