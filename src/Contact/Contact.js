@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 export default function Contact() {
   const form = useRef();
@@ -45,6 +46,7 @@ export default function Contact() {
           <input className="send" type="submit" value="Submit" />
         </form>
       </div>
+      <Footer />
     </>
   );
 }
