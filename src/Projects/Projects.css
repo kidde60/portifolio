@@ -35,7 +35,14 @@
 }
 
 .card-container h1 {
-  text-align: center;
+  font-size: 40px;
+    font-weight: 700;
+}
+.card-container p {
+  font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
 }
 
 .project-btn {
@@ -48,8 +55,11 @@
 
 .lists li {
   border-right: 1px solid #f5f5ff;
-  padding: 0 2% 0 5px;
+  padding: 0 3% 0 5px;
   margin: 0 10px 0 0;
+  font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
 }
 
 .css {
@@ -78,6 +88,9 @@
 .project {
   color: #191765;
   text-align: center;
+  font-size: 64px;
+    font-weight: 700;
+    line-height: 114px;
 }
 
 @media only screen and (max-width: 760px) {
@@ -98,7 +111,9 @@
     width: 100%;
     margin: 10px 0;
   }
-
+.card-container h1{
+  font-size: 32px;
+}
   .lists {
     padding: 0;
     width: 100%;
