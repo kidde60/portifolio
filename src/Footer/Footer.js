@@ -8,8 +8,7 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="background" />
-
-      <div className="social">
+      <div className="social" id="footer-social">
         <a href="https://kgeorgewilliam60@gmail.com">
           <FaEnvelope />
         </a>
