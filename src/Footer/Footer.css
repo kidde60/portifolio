@@ -2,3 +2,12 @@
   background-color: #191765;
   color: #f5f5ff;
 }
+.background{
+  background-image: url(./shape-bg.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(180deg);
+  padding: 50px 0;
+  background-color: #191765;
+}
