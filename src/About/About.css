@@ -7,7 +7,9 @@
 .about h1 {
   text-align: center;
   font-size: 40px;
+  font-weight: 600;
   padding: 20px 0;
+  color: #7d73fc;
 }
 
 .desc {
@@ -33,6 +35,8 @@
 
 .skills h2 {
   font-size: 25px;
+  color: #9490ff;
+  font-weight: 550;
 }
 
 .list {
