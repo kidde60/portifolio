@@ -7,6 +7,8 @@ import './Footer.css';
 export default function Footer() {
   return (
     <div className="footer">
+      <div className="background" />
+
       <div className="social">
         <a href="https://kgeorgewilliam60@gmail.com">
           <FaEnvelope />
