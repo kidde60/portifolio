@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 import './About.css';
 
 export default function About() {
@@ -79,6 +80,7 @@ export default function About() {
         </div>
 
       </div>
+      <Footer />
     </>
   );
 }
