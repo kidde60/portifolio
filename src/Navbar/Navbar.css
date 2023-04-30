@@ -49,7 +49,7 @@
     height: 100vh;
     background-color: #2a2876;
     font-size: 18px;
-    gap: 10px;
+    gap: 20px;
     padding: 20px;
     transition: 0.25s ease-in-out;
     z-index: 1;
