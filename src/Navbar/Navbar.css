@@ -58,6 +58,8 @@
   #nav-list.active {
     right: 0;
     width: 100%;
+    align-items: center;
+  
   }
 
   #mobile i {
