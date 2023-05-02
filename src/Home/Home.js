@@ -7,7 +7,7 @@ import ProjectsCard from '../Projects/ProjectsCard';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import './Home.css';
-import Resume from './Resume.pdf'
+import Resume from './Resume.pdf';
 
 export default function Home() {
   return (
