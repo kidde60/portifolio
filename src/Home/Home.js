@@ -7,7 +7,7 @@ import ProjectsCard from '../Projects/ProjectsCard';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import './Home.css';
-import Resume from './Resume.pdf'
+import Resume from './Resume.pdf';
 
 export default function Home() {
   return (
@@ -20,7 +20,6 @@ export default function Home() {
             {' '}
             <br />
             <span className="span">George William Kidde</span>
-
           </h1>
           <h2>Software Developer</h2>
           <div className="social">
