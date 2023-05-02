@@ -7,6 +7,7 @@ import ProjectsCard from '../Projects/ProjectsCard';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import './Home.css';
+import Resume from './Resume.pdf'
 
 export default function Home() {
   return (
@@ -43,7 +44,7 @@ export default function Home() {
           <p className="paragraph">I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, do not hestiate to contact me.</p>
           <div className="home-btn">
             <NavLink to="../Contact" className="hire">Hire me</NavLink>
-            <a href="Resume.pdf" download="Resume.pdf">
+            <a href={Resume} download="Resume.pdf">
               <button type="button" className="hire-btn">Get Resume</button>
               {' '}
             </a>
