@@ -54,10 +54,15 @@
   padding: 5%;
 }
 
+.lists {
+  margin: 0;
+  padding: 0;
+}
+
 .lists li {
   border-right: 1px solid #f5f5ff;
-  padding: 0 3% 0 5px;
-  margin: 0 10px 0 0;
+  padding: 0 1% 0 5px;
+  margin: 0;
   font-size: 15px;
   line-height: 20px;
   font-weight: 500;
