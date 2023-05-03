@@ -12,7 +12,6 @@ const CardContainer = [
     live: 'https://recipe-za9j.onrender.com/users/sign_in',
     source: 'https://github.com/kidde60/Recipe-App',
     build: {
-      css: 'CSS3',
       html: 'Ruby on Rails',
       bootstrap: 'PostgreSQL',
       lags: 'Bootstrap',
@@ -26,7 +25,6 @@ const CardContainer = [
     live: 'https://budget-app-render.onrender.com/',
     source: 'https://github.com/kidde60/Budget-App',
     build: {
-      css: 'CSS3',
       html: 'Ruby on Rails',
       bootstrap: 'PostgreSQL',
       lags: 'Bootstrap',
@@ -39,7 +37,6 @@ const CardContainer = [
     live: 'https://kidde60.github.io/Capstone-project-1/index.html',
     source: 'https://github.com/kidde60/Capstone-project-1',
     build: {
-      css: 'CSS3',
       html: 'HTML5',
       bootstrap: 'JavaScript',
       lags: 'Bootstrap',
@@ -52,7 +49,6 @@ const CardContainer = [
     live: 'https://kidde60.github.io/Awesome-books-with-ES6/',
     source: 'https://github.com/kidde60/Awesome-books-with-ES6',
     build: {
-      css: 'CSS3',
       html: 'HTML5',
       bootstrap: 'JavaScript',
       lags: 'Bootstrap',
@@ -65,7 +61,6 @@ const CardContainer = [
     live: 'https://kidde60.github.io/To-Do-List-Webpage/',
     source: 'https://github.com/kidde60/To-Do-List-Webpage',
     build: {
-      css: 'CSS3',
       html: 'HTML5',
       bootstrap: 'JavaScript',
       lags: 'Bootstrap',
