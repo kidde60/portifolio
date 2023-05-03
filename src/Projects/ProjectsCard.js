@@ -18,8 +18,8 @@ export default function ProjectsCard() {
 
               <p>{value.desc}</p>
               <ul className="lists d-flex flex-row justify-content-start">
-                <li className="css">{value.build.css}</li>
-                <li>{value.build.html}</li>
+                
+                <li className="css">{value.build.html}</li>
                 <li>{value.build.bootstrap}</li>
                 <li>{value.build.lags}</li>
               </ul>
