@@ -12,18 +12,18 @@ import Resume from './Resume.pdf';
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar />   
       <div className="home-container">
         <div className="home">
           <h1 className="coln">
-            Hello, Iam
+            Hello, I am
             {' '}
             <br />
             <span className="span">George William Kidde</span>
           </h1>
           <h2>Software Developer</h2>
           <div className="social">
-            <a href="https://kgeorgewilliam60@gmail.com">
+            <a href="mailto:kgeorgewilliam60@gmail.com">
               <FaEnvelope />
             </a>
             <a href="https://github.com/kidde60">
@@ -40,7 +40,7 @@ export default function Home() {
             </a>
           </div>
 
-          <p className="paragraph">I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, do not hestiate to contact me.</p>
+          <p className="paragraph">Whether you are looking to build a product, feature, or website, I have got the expertise to bring your vision to life. Take a look at my portfolio and experience to see what I can do. If you are impressed with what you see and have a coding project in mind, do not hesitate to get in touch with me.</p>
           <div className="home-btn">
             <NavLink to="../Contact" className="hire">Hire me</NavLink>
             <a href={Resume} download="Resume.pdf">
