@@ -12,7 +12,7 @@ import Resume from './Resume.pdf';
 export default function Home() {
   return (
     <>
-      <Navbar />   
+      <Navbar />
       <div className="home-container">
         <div className="home">
           <h1 className="coln">
