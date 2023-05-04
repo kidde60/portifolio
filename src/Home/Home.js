@@ -26,16 +26,16 @@ export default function Home() {
             <a href="mailto:kgeorgewilliam60@gmail.com">
               <FaEnvelope />
             </a>
-            <a href="https://github.com/kidde60">
+            <a href="https://github.com/kidde60" target="_blank" rel="noopener noreferrer">
               <FaGithub />
             </a>
-            <a href="https://www.linkedin.com/in/kidde-george-william/">
+            <a href="https://www.linkedin.com/in/kidde-george-william/" target="_blank" rel="noopener noreferrer">
               <FaLinkedinIn />
             </a>
-            <a href="https://twitter.com/KGWilliam60">
+            <a href="https://twitter.com/KGWilliam60" target="_blank" rel="noopener noreferrer">
               <FaTwitter />
             </a>
-            <a href="https://george-william-kidde-portifolio.netlify.app/">
+            <a href="https://george-william-kidde-portifolio.netlify.app/" target="_blank" rel="noopener noreferrer">
               <i className="fa-solid fa-globe" />
             </a>
           </div>
