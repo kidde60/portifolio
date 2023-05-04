@@ -1,10 +1,12 @@
 import React from 'react';
 import CardContainer from './ProjectsDetails';
 import './Projects.css';
+import Navbar from '../Navbar/Navbar';
 
 export default function ProjectsCard() {
   return (
     <div>
+      <Navbar />
       <h1 className="project">PROJECTS</h1>
       <div className="container">
         {CardContainer.map((value) => (
