@@ -2,6 +2,7 @@ import React from 'react';
 import CardContainer from './ProjectsDetails';
 import './Projects.css';
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 export default function ProjectsCard() {
   return (
@@ -33,6 +34,7 @@ export default function ProjectsCard() {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
