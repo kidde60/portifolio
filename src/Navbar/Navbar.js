@@ -23,7 +23,7 @@ const Navbar = () => {
         <div id="nav-list" className={clicked ? '#nav-list active' : '#nav-list'}>
           <NavLink to="../">Home</NavLink>
           <NavLink to="../About">About</NavLink>
-
+          <NavLink to="../Projects">Projects</NavLink>
           <NavLink to="../Contact">Contact</NavLink>
         </div>
       </nav>
