@@ -9,7 +9,7 @@ export default function Footer() {
     <div className="footer">
       <div className="background" />
       <div className="social" id="footer-social">
-        <a href="mailto:kgeorgewilliam60@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:kgeorgewilliam60@gmail.com">
           <FaEnvelope />
         </a>
         <a href="https://github.com/kidde60" target="_blank" rel="noopener noreferrer">
