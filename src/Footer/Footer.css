@@ -3,7 +3,7 @@
 }
 
 .footer {
-  background-color: #191765;
+  background: #2563EB;
   color: #f5f5ff;
 }
 
@@ -14,7 +14,7 @@
   background-size: contain;
   transform: rotate(180deg);
   padding: 45px 0;
-  background-color: #191765;
+  
 }
 
 @media only screen and (max-width: 760px) {
