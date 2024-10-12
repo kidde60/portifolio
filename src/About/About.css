@@ -1,6 +1,6 @@
 .about {
   padding: 7% 5% 0;
-  background-color: #191765;
+  background: #2563EB;
   color: #f5f5ff;
 }
 
@@ -9,7 +9,7 @@
   font-size: 40px;
   font-weight: 600;
   padding: 20px 0;
-  color: #7d73fc;
+  color: #FBBF24;
 }
 
 .desc {
@@ -35,7 +35,7 @@
 
 .skills h2 {
   font-size: 25px;
-  color: #9490ff;
+  color: #FBBF24;
   font-weight: 550;
 }
 
