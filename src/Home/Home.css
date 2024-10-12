@@ -1,7 +1,7 @@
 .home-container {
   display: flex;
   padding: 5% 0 8%;
-  background-color: #191765;
+  background-color: #2563eb;
   background-image: url(./shape-bg.png);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -21,7 +21,7 @@
 }
 
 .span {
-  color: #7d73fc;
+  color: #fbbf24;
 }
 
 .home h2 {
@@ -35,14 +35,13 @@
   justify-content: space-between;
   width: 50%;
   padding: 2% 10px;
-  background: #191765;
+  /* background: #191765; */
 }
 
 .paragraph {
-  font-size: 20px;
-  padding: 20px 0;
-  font-weight: 400;
-  line-height: 32px;
+  font-size: 18px;
+  padding: 18px 0;
+  line-height: 25px;
   text-align: center;
 }
 
@@ -81,29 +80,33 @@
 }
 
 .hire-btn {
-  border: 1px solid #f5f5ff;
+  /* border: 1px solid #FBBF24; */
+  border: none;
   padding: 5px 20px;
-  font-size: 20px;
+  color: #1e3a8a;
+  font-size: 18px;
   border-radius: 15px;
-  background-color: #191765;
+  background-color: #fff;
   cursor: pointer;
 }
 
 .hire-btn:hover {
   border: 1px solid #00f;
+  background: #3b82f6;
+  color: #fff;
 }
 
 .hire {
-  background: #00f;
+  background: #fbbf24;
   color: whitesmoke;
   padding: 5px 30px;
   border: none;
-  font-size: 25px;
+  font-size: 20px;
   border-radius: 15px;
 }
 
 .hire:hover {
-  background-color: #191765;
+  background-color: #fcd34d;
   color: #f5f5ff;
   border: 1px solid #f5f5ff;
 }
