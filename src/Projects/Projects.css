@@ -14,7 +14,7 @@
 .card {
   border: 2px solid #f5f5ff;
   padding: 10px;
-  background-color: #191765;
+  background: #2563eb;
   display: flex;
   flex-direction: row;
 }
@@ -73,7 +73,7 @@
 }
 
 .live {
-  background-color: #191765;
+  /* background-color: #191765; */
   color: #f5f5ff;
   padding: 5px 20px;
   font-size: 25px;
@@ -92,8 +92,8 @@
 }
 
 .project {
-  padding: 20px 0 0;
-  color: #191765;
+  padding: 30px 0 0;
+  color: #f6b40f;
   text-align: center;
   font-size: 64px;
   font-weight: 700;
