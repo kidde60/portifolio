@@ -1,5 +1,5 @@
 #navbar {
-  background-color: #2a2876;
+  background-color: #1e3a8a;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,7 +10,7 @@
 }
 
 #navbar a {
-  color: #f5f5ff;
+  color: #fbbf24;
   font-size: 20px;
   font-weight: 500;
 }
