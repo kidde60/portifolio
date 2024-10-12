@@ -6,7 +6,7 @@
 }
 
 .form-container {
-  background-color: #191765;
+  background-color: #2563EB;
   color: #f5f5ff;
   text-align: center;
   padding: 7% 0 5%;
@@ -15,7 +15,7 @@
 .contact h1 {
   font-size: 40px;
   padding: 20px 0;
-  color: #7d73fc;
+  color: #FBBF24;
   font-weight: 600;
 }
 
@@ -34,22 +34,22 @@ label {
 
 input {
   height: 40px;
-  font-size: 20px;
+  font-size: 18px;
   padding: 5px 10px;
   border: 1px solid #f5f5ff;
   border-radius: 10px;
-  outline: none;
-  background: #191765;
+  outline: none; 
+  background: #2563EB;
 }
 
 textarea {
-  background: #191765;
   height: 200px;
-  font-size: 20px;
-  padding: 5px 10px;
+  font-size: 18px;
+  padding:  10px 20px;
   border: 1px solid #f5f5ff;
   border-radius: 10px;
   outline: none;
+  background: #2563EB;
 }
 
 .send {
@@ -57,13 +57,15 @@ textarea {
   height: 40px;
   margin: 10px 0;
   font-size: 25px;
-  background: #00f;
+  background: #fff;
   border: none;
-  color: whitesmoke;
+  color: #1E3A8A;
 }
 
 .send:hover {
-  border: 1px solid #f5f5ff;
+  border: 1px solid #00f;
+  background: #3B82F6;
+  color: #fff;
 }
 
 @media only screen and (max-width: 760px) {
