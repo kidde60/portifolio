@@ -687,11 +687,18 @@
   transition: all var(--transition-normal);
   opacity: 0;
   transform: translateY(30px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  min-height: 400px;
 }
 
 .home-projects-section.animate-in .home-project-card {
-  animation: slideInUp 0.8s ease-out forwards;
-  animation-delay: var(--delay, 0s);
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease-out;
+  transition-delay: var(--delay, 0s);
 }
 
 .home-project-card:hover {
@@ -759,7 +766,14 @@
 }
 
 .project-content {
-  padding: var(--space-4);
+  padding: var(--space-6);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .project-content h3 {
@@ -767,16 +781,28 @@
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: var(--space-3);
+  /* Fallback color in case gradient fails */
   background: var(--gradient-accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+/* Fallback for browsers that don't support background-clip: text */
+@supports not (-webkit-background-clip: text) {
+  .project-content h3 {
+    background: none;
+    color: var(--accent-primary);
+  }
+}
+
 .project-content p {
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: var(--space-4);
+  font-size: var(--text-base);
+  opacity: 1;
+  flex-grow: 1;
 }
 
 .project-links {
