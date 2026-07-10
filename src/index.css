@@ -38,12 +38,14 @@
   }
 
   .btn-secondary {
-    @apply bg-secondary hover:bg-slate-700 text-white border transition-all duration-300 ease-out;
-    border-color: rgba(246, 147, 27, 0.3);
+    @apply bg-secondary text-white border transition-all duration-300 ease-out;
+    border-color: rgba(245, 245, 245, 0.3);
   }
 
   .btn-secondary:hover {
-    border-color: rgba(246, 147, 27, 0.6);
+    border-color: rgba(245, 245, 245, 0.8);
+    background-color: rgba(245, 245, 245, 0.1);
+    color: #f5f5f5;
   }
 
   .section-container {

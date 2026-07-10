@@ -252,7 +252,10 @@ export default function Home() {
               individuals, organizations, and enterprises across Uganda, South
               Sudan, Nigeria, and the UK.
             </p>
-            <Link to="/about" className="inline-block btn btn-primary mt-6">
+            <Link
+              to="/about"
+              className="flex gap-2 items-center w-fit btn btn-primary mt-6"
+            >
               Learn More About Me
               <ArrowRight size={20} />
             </Link>

@@ -6,9 +6,9 @@ export default {
       colors: {
         primary: "#113207",
         secondary: "#1a4d1a",
-        accent: "#06b6d4",
-        "accent-dark": "#0891b2",
-        "accent-light": "#22d3ee",
+        accent: "#f5f5f5",
+        "accent-dark": "#e0e0e0",
+        "accent-light": "#ffffff",
         "orange-accent": "#f6931b",
         "orange-accent-dark": "#d97706",
       },
