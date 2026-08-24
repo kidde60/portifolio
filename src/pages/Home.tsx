@@ -10,26 +10,60 @@ import {
   Globe,
   Users,
 } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
 import profileImg from "../assets/profile.jpeg";
+import nyumbayoImg from "../assets/Nyumbayo.png";
+import accountingImg from "../assets/accounting.png";
+import billingImg from "../assets/billing.png";
 
 export default function Home() {
+  const { theme } = useTheme();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const heroImageVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 40 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
+
+  const cardHoverVariants = {
+    hover: {
+      y: -8,
+      transition: { duration: 0.3 },
+    },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
     },
   };
 
@@ -39,21 +73,21 @@ export default function Home() {
       description:
         "Comprehensive property rental management system with tenant tracking, payment processing, and maintenance scheduling",
       tech: ["React.js", "Node.js", "MongoDB"],
-      image: "🏢",
+      image: nyumbayoImg,
     },
     {
       title: "Enterprise Accounting System",
       description:
         "Full accounting system with multi-currency support for Uganda & Nigeria",
       tech: ["React", "TypeScript", "PostgreSQL"],
-      image: "📊",
+      image: accountingImg,
     },
     {
       title: "Water Billing System",
       description:
         "Smart IoT-integrated billing for water utilities across Uganda",
       tech: ["Angular", "Ant Design", "Node.js"],
-      image: "💧",
+      image: billingImg,
     },
   ];
 
@@ -79,17 +113,21 @@ export default function Home() {
               <p className="text-accent text-lg font-semibold">Hello, I am</p>
               <h1
                 className="text-5xl md:text-7xl font-bold"
-                style={{ color: "#f6931b" }}
+                style={{ color: "#06b6d4" }}
               >
                 George William Kidde
               </h1>
             </div>
 
-            <h2 className="text-2xl md:text-4xl text-gray-300 font-light">
+            <h2
+              className={`text-2xl md:text-4xl font-light ${theme === "dark" ? "text-gray-300" : "text-slate-700"}`}
+            >
               Full-Stack Enterprise Developer
             </h2>
 
-            <p className="text-gray-400 text-lg max-w-2xl leading-relaxed">
+            <p
+              className={`text-lg max-w-2xl leading-relaxed ${theme === "dark" ? "text-gray-400" : "text-slate-600"}`}
+            >
               Building scalable enterprise systems across Uganda, South Sudan,
               Nigeria, and the UK. Specializing in React, TypeScript, Angular,
               and React Native applications.
@@ -209,10 +247,18 @@ export default function Home() {
                 className="glass-effect p-8 text-center hover:bg-accent/10 transition-all duration-300"
               >
                 <Icon className="w-12 h-12 text-accent mx-auto mb-4" />
-                <div className="text-4xl font-bold text-white mb-2">
+                <div
+                  className={`text-4xl font-bold mb-2 ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+                >
                   {stat.number}
                 </div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div
+                  className={
+                    theme === "dark" ? "text-gray-400" : "text-slate-600"
+                  }
+                >
+                  {stat.label}
+                </div>
               </motion.div>
             );
           })}
@@ -224,7 +270,9 @@ export default function Home() {
         <motion.div variants={itemVariants} className="space-y-8">
           <h2 className="section-title">Who I Am</h2>
           <div className="glass-effect p-8 md:p-12 space-y-6">
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p
+              className={`text-lg leading-relaxed ${theme === "dark" ? "text-gray-300" : "text-slate-700"}`}
+            >
               I'm a{" "}
               <span className="text-accent font-semibold">
                 passionate full-stack developer
@@ -242,7 +290,9 @@ export default function Home() {
               </span>{" "}
               that drive real business impact.
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p
+              className={`text-lg leading-relaxed ${theme === "dark" ? "text-gray-300" : "text-slate-700"}`}
+            >
               With professional experience at companies including{" "}
               <span className="text-accent font-semibold">
                 Pinnisoft, Tek Juice, Tracecorp Solutions, 2ML Consultant
@@ -267,21 +317,40 @@ export default function Home() {
       <section className="section-container">
         <motion.div variants={itemVariants} className="space-y-12">
           <h2 className="section-title">Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {projects.map((project, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="glass-effect overflow-hidden hover:border-accent/50 transition-all duration-300 group"
+                whileHover="hover"
+                className="glass-effect overflow-hidden hover:border-accent/50 transition-all duration-300 group cursor-pointer"
               >
-                <div className="text-6xl p-8 bg-accent/10 group-hover:bg-accent/20 transition-colors duration-300">
-                  {project.image}
+                <div className="h-48 overflow-hidden bg-accent/10 group-hover:bg-accent/20 transition-colors duration-300">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-white">
+                  <h3
+                    className={`text-xl font-bold ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+                  >
                     {project.title}
                   </h3>
-                  <p className="text-gray-400">{project.description}</p>
+                  <p
+                    className={
+                      theme === "dark" ? "text-gray-400" : "text-slate-600"
+                    }
+                  >
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, i) => (
                       <span key={i} className="tech-tag">
@@ -292,7 +361,7 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
           <div className="text-center mt-12">
             <Link to="/projects" className="btn btn-primary">
               View All Projects
@@ -308,10 +377,14 @@ export default function Home() {
           variants={itemVariants}
           className="glass-effect p-12 md:p-16 text-center space-y-8"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
+          <h2
+            className={`text-4xl md:text-5xl font-bold ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+          >
             Let's Work Together!
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <p
+            className={`text-lg max-w-2xl mx-auto ${theme === "dark" ? "text-gray-300" : "text-slate-700"}`}
+          >
             I'm actively seeking new opportunities, especially in frontend
             development roles. Available for freelance projects, contract work,
             and full-time positions.

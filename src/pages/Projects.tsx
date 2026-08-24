@@ -1,18 +1,35 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Projects() {
+  const { theme } = useTheme();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const projects = [
@@ -101,10 +118,14 @@ export default function Projects() {
       <section className="section-container min-h-[50vh] flex flex-col justify-center">
         <motion.div variants={itemVariants} className="space-y-6">
           <h1 className="text-5xl md:text-6xl font-bold">My Projects</h1>
-          <p className="text-2xl text-gray-300 font-light">
+          <p
+            className={`text-2xl font-light ${theme === "dark" ? "text-gray-300" : "text-slate-700"}`}
+          >
             Building Digital Experiences
           </p>
-          <p className="text-gray-400 text-lg max-w-2xl">
+          <p
+            className={`text-lg max-w-2xl ${theme === "dark" ? "text-gray-400" : "text-slate-600"}`}
+          >
             A collection of enterprise systems and applications I've built for
             businesses across multiple countries.
           </p>
@@ -114,14 +135,18 @@ export default function Projects() {
       {/* Projects Grid */}
       <section className="section-container">
         <motion.div
-          variants={itemVariants}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           {projects.map((project, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="glass-effect overflow-hidden hover:border-accent/50 transition-all duration-300 group flex flex-col"
+              whileHover={{ y: -8 }}
+              className="glass-effect overflow-hidden hover:border-accent/50 transition-all duration-300 group flex flex-col cursor-pointer"
             >
               {/* Project Image/Icon */}
               <div className="h-48 bg-accent/10 group-hover:bg-accent/20 transition-colors duration-300 flex items-center justify-center overflow-hidden">
@@ -134,10 +159,16 @@ export default function Projects() {
 
               {/* Project Content */}
               <div className="p-6 space-y-4 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold text-white">
+                <h3
+                  className={`text-xl font-bold ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+                >
                   {project.title}
                 </h3>
-                <p className="text-gray-400 flex-1">{project.description}</p>
+                <p
+                  className={`flex-1 ${theme === "dark" ? "text-gray-400" : "text-slate-600"}`}
+                >
+                  {project.description}
+                </p>
 
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 pt-4">
@@ -149,7 +180,9 @@ export default function Projects() {
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-4 pt-6 border-t border-white/10">
+                <div
+                  className={`border-t ${theme === "dark" ? "border-white/10" : "border-slate-300/20"}`}
+                >
                   <a
                     href={project.live}
                     target="_blank"
@@ -172,28 +205,56 @@ export default function Projects() {
           variants={itemVariants}
           className="glass-effect p-12 md:p-16 space-y-8"
         >
-          <h2 className="text-3xl font-bold text-white">More About My Work</h2>
+          <h2
+            className={`text-3xl font-bold ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+          >
+            More About My Work
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-4">
               <div className="text-4xl">🌍</div>
-              <h3 className="text-xl font-bold text-white">Global Reach</h3>
-              <p className="text-gray-400">
+              <h3
+                className={`text-xl font-bold ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+              >
+                Global Reach
+              </h3>
+              <p
+                className={
+                  theme === "dark" ? "text-gray-400" : "text-slate-600"
+                }
+              >
                 Built systems serving businesses across Uganda, South Sudan,
                 Nigeria, and the UK with 10,000+ active users.
               </p>
             </div>
             <div className="space-y-4">
               <div className="text-4xl">⚙️</div>
-              <h3 className="text-xl font-bold text-white">Enterprise Scale</h3>
-              <p className="text-gray-400">
+              <h3
+                className={`text-xl font-bold ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+              >
+                Enterprise Scale
+              </h3>
+              <p
+                className={
+                  theme === "dark" ? "text-gray-400" : "text-slate-600"
+                }
+              >
                 Developed 50+ enterprise systems handling critical business
                 operations in finance, healthcare, and utilities.
               </p>
             </div>
             <div className="space-y-4">
               <div className="text-4xl">🚀</div>
-              <h3 className="text-xl font-bold text-white">Modern Tech</h3>
-              <p className="text-gray-400">
+              <h3
+                className={`text-xl font-bold ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+              >
+                Modern Tech
+              </h3>
+              <p
+                className={
+                  theme === "dark" ? "text-gray-400" : "text-slate-600"
+                }
+              >
                 Expertise in React, TypeScript, Node.js, and modern development
                 practices for scalable applications.
               </p>

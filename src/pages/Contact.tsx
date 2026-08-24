@@ -11,19 +11,36 @@ import {
 } from "lucide-react";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Contact() {
+  const { theme } = useTheme();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const form = useRef<HTMLFormElement>(null);
@@ -86,13 +103,19 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="section-container min-h-[50vh] flex flex-col justify-center">
         <motion.div variants={itemVariants} className="space-y-6">
-          <h1 className="text-5xl md:text-6xl font-bold text-white">
+          <h1
+            className={`text-5xl md:text-6xl font-bold ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+          >
             Let's Work Together
           </h1>
-          <p className="text-2xl text-gray-300 font-light">
+          <p
+            className={`text-2xl font-light ${theme === "dark" ? "text-gray-300" : "text-slate-700"}`}
+          >
             Ready to bring your ideas to life
           </p>
-          <p className="text-gray-400 text-lg max-w-2xl">
+          <p
+            className={`text-lg max-w-2xl ${theme === "dark" ? "text-gray-400" : "text-slate-600"}`}
+          >
             I'm always interested in new opportunities, whether it's a freelance
             project, full-time position, or just a chat about technology.
           </p>
@@ -108,15 +131,27 @@ export default function Contact() {
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-white">Get In Touch</h2>
-              <p className="text-gray-400 text-lg">
+              <h2
+                className={`text-3xl font-bold ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+              >
+                Get In Touch
+              </h2>
+              <p
+                className={`text-lg ${theme === "dark" ? "text-gray-400" : "text-slate-600"}`}
+              >
                 I'm always interested in new opportunities and challenges. Let's
                 connect and create something amazing together!
               </p>
             </div>
 
             {/* Contact Items */}
-            <div className="space-y-4">
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="space-y-4"
+            >
               {contactInfo.map((item, index) => {
                 const Icon = item.icon;
                 return (
@@ -130,15 +165,23 @@ export default function Contact() {
                       <Icon className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">
+                      <h3
+                        className={`text-lg font-semibold ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+                      >
                         {item.title}
                       </h3>
-                      <p className="text-gray-400">{item.value}</p>
+                      <p
+                        className={
+                          theme === "dark" ? "text-gray-400" : "text-slate-600"
+                        }
+                      >
+                        {item.value}
+                      </p>
                     </div>
                   </motion.a>
                 );
               })}
-            </div>
+            </motion.div>
 
             {/* Availability */}
             <motion.div
@@ -147,7 +190,13 @@ export default function Contact() {
             >
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-gray-300">Available for Projects</span>
+                <span
+                  className={
+                    theme === "dark" ? "text-gray-300" : "text-slate-700"
+                  }
+                >
+                  Available for Projects
+                </span>
               </div>
             </motion.div>
           </div>
@@ -157,7 +206,9 @@ export default function Contact() {
             variants={itemVariants}
             className="glass-effect p-8 md:p-12"
           >
-            <h3 className="text-2xl font-bold text-white mb-8">
+            <h3
+              className={`text-2xl font-bold mb-8 ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+            >
               Send Me a Message
             </h3>
 
@@ -166,7 +217,7 @@ export default function Contact() {
               <div className="space-y-2">
                 <label
                   htmlFor="user_name"
-                  className="block text-sm font-medium text-gray-300"
+                  className={`block text-sm font-medium ${theme === "dark" ? "text-gray-300" : "text-slate-700"}`}
                 >
                   Name
                 </label>
@@ -262,8 +313,14 @@ export default function Contact() {
           variants={itemVariants}
           className="glass-effect p-12 md:p-16 text-center space-y-8"
         >
-          <h2 className="text-3xl font-bold text-white">Connect With Me</h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <h2
+            className={`text-3xl font-bold ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+          >
+            Connect With Me
+          </h2>
+          <p
+            className={`text-lg max-w-2xl mx-auto ${theme === "dark" ? "text-gray-400" : "text-slate-600"}`}
+          >
             Follow me on social media to stay updated with my latest projects
             and insights.
           </p>
