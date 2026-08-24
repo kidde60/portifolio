@@ -4,13 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#113207",
-        secondary: "#1a4d1a",
+        primary: "#0f172a",
+        secondary: "#1e293b",
         accent: "#f5f5f5",
         "accent-dark": "#e0e0e0",
         "accent-light": "#ffffff",
-        "orange-accent": "#f6931b",
-        "orange-accent-dark": "#d97706",
+        "orange-accent": "#06b6d4",
+        "orange-accent-dark": "#0891b2",
+        cyan: "#06b6d4",
+        "cyan-dark": "#0891b2",
+        violet: "#8b5cf6",
+        "violet-dark": "#7c3aed",
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-in-out",
@@ -53,17 +57,17 @@ export default {
           "50%": { transform: "translateY(-10px)" },
         },
         glow: {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(246, 147, 27, 0.3)" },
-          "50%": { boxShadow: "0 0 40px rgba(246, 147, 27, 0.6)" },
+          "0%, 100%": { boxShadow: "0 0 20px rgba(6, 182, 212, 0.3)" },
+          "50%": { boxShadow: "0 0 40px rgba(6, 182, 212, 0.6)" },
         },
         pulseGlow: {
           "0%, 100%": {
             opacity: "1",
-            boxShadow: "0 0 20px rgba(246, 147, 27, 0.3)",
+            boxShadow: "0 0 20px rgba(6, 182, 212, 0.3)",
           },
           "50%": {
             opacity: "0.8",
-            boxShadow: "0 0 30px rgba(246, 147, 27, 0.5)",
+            boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)",
           },
         },
       },

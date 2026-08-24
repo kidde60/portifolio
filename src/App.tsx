@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
+import { ThemeProvider, useTheme } from "./context/ThemeContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -24,11 +25,19 @@ function ScrollToTop() {
   return null;
 }
 
-function App() {
+function AppContent() {
+  const { theme } = useTheme();
+
   return (
-    <Router>
+    <>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-gradient-to-b from-primary via-secondary to-primary relative overflow-hidden">
+      <div
+        className={`flex flex-col min-h-screen relative overflow-hidden transition-colors duration-300 ${
+          theme === "dark"
+            ? "bg-gradient-to-b from-primary via-secondary to-primary"
+            : "bg-gradient-to-b from-slate-50 via-slate-100 to-slate-50"
+        }`}
+      >
         <Navbar />
         <div className="flex-1 pt-24">
           <AnimatePresence mode="wait">
@@ -42,7 +51,17 @@ function App() {
         </div>
         <Footer />
       </div>
-    </Router>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </ThemeProvider>
   );
 }
 

@@ -4,22 +4,34 @@
 
 @layer base {
   body {
+    @apply transition-colors duration-300;
+  }
+
+  html[data-theme="dark"] body {
     @apply bg-primary text-gray-300;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    background-attachment: fixed;
+  }
+
+  html[data-theme="light"] body {
+    @apply bg-slate-50 text-slate-900;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #f8fafc 100%);
+    background-attachment: fixed;
   }
 
   h1 {
     @apply text-4xl md:text-5xl font-bold;
-    color: #f6931b;
+    color: #06b6d4;
   }
 
   h2 {
     @apply text-3xl md:text-4xl font-bold;
-    color: #f6931b;
+    color: #06b6d4;
   }
 
   h3 {
     @apply text-xl md:text-2xl font-semibold;
-    color: #f6931b;
+    color: #06b6d4;
   }
 }
 
@@ -29,23 +41,38 @@
   }
 
   .btn-primary {
-    background-color: #f6931b;
-    @apply hover:bg-amber-600 text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-out;
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    @apply text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-out;
   }
 
   .btn-primary:hover {
-    background-color: #d97706;
+    background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
   }
 
   .btn-secondary {
-    @apply bg-secondary text-white border transition-all duration-300 ease-out;
+    @apply border transition-all duration-300 ease-out;
+  }
+
+  html[data-theme="dark"] .btn-secondary {
+    @apply bg-secondary text-white;
     border-color: rgba(245, 245, 245, 0.3);
   }
 
-  .btn-secondary:hover {
+  html[data-theme="dark"] .btn-secondary:hover {
     border-color: rgba(245, 245, 245, 0.8);
     background-color: rgba(245, 245, 245, 0.1);
     color: #f5f5f5;
+  }
+
+  html[data-theme="light"] .btn-secondary {
+    @apply bg-slate-200 text-slate-900;
+    border-color: rgba(15, 23, 42, 0.2);
+  }
+
+  html[data-theme="light"] .btn-secondary:hover {
+    border-color: rgba(15, 23, 42, 0.5);
+    background-color: rgba(15, 23, 42, 0.1);
+    color: #0f172a;
   }
 
   .section-container {
@@ -54,22 +81,46 @@
 
   .section-title {
     @apply text-3xl md:text-4xl font-bold mb-8 text-center;
-    color: #f6931b;
+    color: #06b6d4;
   }
 
   .tech-tag {
-    background-color: rgba(246, 147, 27, 0.15);
-    color: #f6931b;
     @apply inline-block px-3 py-1 rounded-full text-sm font-medium;
+    background-color: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+  }
+
+  html[data-theme="light"] .tech-tag {
+    background-color: rgba(6, 182, 212, 0.1);
+    color: #0891b2;
   }
 
   .glass-effect {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl transition-all duration-300 ease-out;
+    @apply backdrop-blur-md border rounded-xl transition-all duration-300 ease-out;
   }
 
-  .glass-effect:hover {
-    border-color: rgba(246, 147, 27, 0.4);
-    box-shadow: 0 10px 25px rgba(246, 147, 27, 0.2);
+  html[data-theme="dark"] .glass-effect {
+    @apply bg-white/5 border-white/10;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  html[data-theme="dark"] .glass-effect:hover {
+    border-color: rgba(6, 182, 212, 0.5);
+    box-shadow: 0 15px 40px rgba(6, 182, 212, 0.25);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+  }
+
+  html[data-theme="light"] .glass-effect {
+    @apply bg-white/40 border-slate-300/30;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  }
+
+  html[data-theme="light"] .glass-effect:hover {
+    border-color: rgba(6, 182, 212, 0.4);
+    box-shadow: 0 15px 40px rgba(6, 182, 212, 0.15);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.5) 100%);
   }
 }
 
