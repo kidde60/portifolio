@@ -1,7 +1,9 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import shapeBg from "../assets/shape-bg.png";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Footer() {
+  const { theme } = useTheme();
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -29,7 +31,11 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-secondary/50 border-t border-accent/20 mt-10 text-white relative overflow-hidden"
+      className={`mt-10 relative overflow-hidden transition-colors duration-300 ${
+        theme === "dark"
+          ? "bg-secondary/50 border-t border-accent/20 text-white"
+          : "bg-slate-200/50 border-t border-slate-300/20 text-slate-900"
+      }`}
       style={{
         backgroundImage: `url(${shapeBg})`,
         backgroundPosition: "bottom right",
@@ -42,10 +48,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
+            <h3 className="text-xl font-bold bg-gradient-to-r from-cyan to-cyan-dark bg-clip-text text-transparent">
               George Kidde
             </h3>
-            <p className="text-gray-300 text-sm">
+            <p
+              className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-slate-600"}`}
+            >
               Full-Stack Enterprise Developer building scalable solutions across
               multiple countries.
             </p>
@@ -53,12 +61,20 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-white font-semibold">Quick Links</h4>
+            <h4
+              className={`font-semibold ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+            >
+              Quick Links
+            </h4>
             <ul className="space-y-2">
               <li>
                 <a
                   href="/"
-                  className="text-gray-400 hover:text-accent transition-colors duration-300 text-sm"
+                  className={`transition-colors duration-300 text-sm ${
+                    theme === "dark"
+                      ? "text-gray-400 hover:text-accent"
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
                 >
                   Home
                 </a>
@@ -66,7 +82,11 @@ export default function Footer() {
               <li>
                 <a
                   href="/about"
-                  className="text-gray-400 hover:text-accent transition-colors duration-300 text-sm"
+                  className={`transition-colors duration-300 text-sm ${
+                    theme === "dark"
+                      ? "text-gray-400 hover:text-accent"
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
                 >
                   About
                 </a>
@@ -74,7 +94,11 @@ export default function Footer() {
               <li>
                 <a
                   href="/projects"
-                  className="text-gray-400 hover:text-accent transition-colors duration-300 text-sm"
+                  className={`transition-colors duration-300 text-sm ${
+                    theme === "dark"
+                      ? "text-gray-400 hover:text-accent"
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
                 >
                   Projects
                 </a>
@@ -82,7 +106,11 @@ export default function Footer() {
               <li>
                 <a
                   href="/contact"
-                  className="text-gray-400 hover:text-accent transition-colors duration-300 text-sm"
+                  className={`transition-colors duration-300 text-sm ${
+                    theme === "dark"
+                      ? "text-gray-400 hover:text-accent"
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
                 >
                   Contact
                 </a>
@@ -92,7 +120,11 @@ export default function Footer() {
 
           {/* Social Links */}
           <div className="space-y-4">
-            <h4 className="text-white font-semibold">Connect</h4>
+            <h4
+              className={`font-semibold ${theme === "dark" ? "text-white" : "text-slate-900"}`}
+            >
+              Connect
+            </h4>
             <div className="flex gap-4">
               {socialLinks.map((link) => {
                 const Icon = link.icon;
@@ -107,7 +139,7 @@ export default function Footer() {
                     className="p-2 glass-effect hover:bg-accent/20 transition-all duration-300"
                     aria-label={link.name}
                   >
-                    <Icon size={20} className="text-accent" />
+                    <Icon size={20} className="text-cyan" />
                   </a>
                 );
               })}
@@ -116,12 +148,22 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-accent/20 my-8"></div>
+        <div
+          className={`my-8 ${
+            theme === "dark"
+              ? "border-t border-accent/20"
+              : "border-t border-slate-300/20"
+          }`}
+        ></div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-300">
+        <div
+          className={`flex flex-col md:flex-row justify-between items-center gap-4 text-sm ${
+            theme === "dark" ? "text-gray-300" : "text-slate-600"
+          }`}
+        >
           <p>© {currentYear} George William Kidde. All rights reserved.</p>
-          <p style={{ color: "#f6931b" }}>
+          <p style={{ color: "#06b6d4" }}>
             Designed & Built with <span>❤️</span> using React & Tailwind CSS
           </p>
         </div>
