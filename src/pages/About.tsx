@@ -1,19 +1,36 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Download } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
 
 export default function About() {
+  const { theme } = useTheme();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const skillCategories = [
@@ -79,7 +96,9 @@ export default function About() {
             </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold">About Me</h1>
-          <p className="text-2xl text-gray-300 font-light">
+          <p
+            className={`text-2xl font-light ${theme === "dark" ? "text-gray-300" : "text-slate-700"}`}
+          >
             Passionate Developer & Problem Solver
           </p>
         </motion.div>
@@ -188,7 +207,13 @@ export default function About() {
       <section className="section-container">
         <motion.div variants={itemVariants} className="space-y-12">
           <h2 className="section-title">Technical Skills</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-12"
+          >
             {skillCategories.map((category, idx) => (
               <motion.div
                 key={idx}
@@ -221,7 +246,7 @@ export default function About() {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </motion.div>
       </section>
 
